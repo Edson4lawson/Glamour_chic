@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const navLinks = ref([
-  { label: "Accueil", href: "home" },
+  { label: "Accueil", href: "" },
   { label: "Services", href: "services" },
   { label: "À propos", href: "about" },
   { label: "Nos spécialistes", href: "specialists" },
@@ -66,9 +66,12 @@ onUnmounted(() => {
       <!-- Logo -->
       <a
         href="#"
-        class="flex items-center focus:outline-none focus:ring-2 focus:ring-pink-600 rounded"
+        class="flex items-center focus:outline-none focus:ring-2 focus:ring-pink-600 rounded "
       >
         <img src="../assets/Glamour-icone.png" alt="" class="w-25 h-25">
+         <p class="text-3px text-pink-700 mx:auto">
+          <strong>Glamour</strong> <br> <span class="ml-3">Chic</span>
+        </p>
       </a>
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex space-x-6" aria-label="Navigation principale">

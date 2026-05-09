@@ -10,7 +10,7 @@
               class="text-3xl text-pink-500 mr-3"
               aria-hidden="true"
             />
-            <h2 class="text-2xl font-bold">Glamour Clinic</h2>
+            <h2 class="text-2xl font-bold text-pink-600"> Glamour Clinic</h2>
           </header>
           <p class="text-gray-400 mb-6">
             Clinique esthétique de référence, dédiée à sublimer votre beauté grâce à
@@ -104,9 +104,9 @@
           </ul>
         </nav>
       </div>
-       <a href="https://Edson-lawson.vercel.app" target="_blank" rel="noopener" class="sweep-link inline-block py-4 text-white hover:text-pink-500 transition-colors duration-300 relative">
+       <!-- <a href="https://Edson-lawson.vercel.app" target="_blank" rel="noopener" class="sweep-link inline-block py-4 text-white hover:text-pink-500 transition-colors duration-300 relative">
                             Developed by Edson Lawson
-                        </a>
+                        </a> -->
     </div>
   </footer>
 </template>

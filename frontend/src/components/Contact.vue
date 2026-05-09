@@ -228,18 +228,17 @@ const validateForm = () => {
 };
 
 const getRecaptchaToken = async () => {
-  const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
-  if (!siteKey) {
-    throw new Error("missing_recaptcha_site_key");
+  try {
+    const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+    if (!siteKey) return null;
+    const grecaptcha = window.grecaptcha;
+    if (!grecaptcha) return null;
+    await new Promise((resolve) => grecaptcha.ready(resolve));
+    return await grecaptcha.execute(siteKey, { action: "contact" });
+  } catch {
+    // Mode démo : reCAPTCHA optionnel
+    return null;
   }
-
-  const grecaptcha = window.grecaptcha;
-  if (!grecaptcha) {
-    throw new Error("grecaptcha_not_loaded");
-  }
-
-  await new Promise((resolve) => grecaptcha.ready(resolve));
-  return grecaptcha.execute(siteKey, { action: "contact" });
 };
 
 const handleSubmit = async () => {
