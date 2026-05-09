@@ -24,7 +24,7 @@
           <section class="bg-white rounded-2xl shadow-xl p-8 h-full">
             <h2 class="text-2xl font-bold text-gray-800 mb-6">Nous contacter</h2>
             <address class="space-y-6">
-              <article v-for="(item, index) in contactItems" :Key="index" class="flex items-start">
+              <article v-for="(item, index) in contactItems" :key="index" class="flex items-start">
                 <figure class="bg-pink-100 p-3 rounded-full mr-4 flex-shrink-0">
                   <icon :icon="item.icon" class="text-pink-600 text-xl" />
                 </figure>
@@ -254,7 +254,8 @@ const handleSubmit = async () => {
 
     const recaptchaToken = await getRecaptchaToken();
 
-    const resp = await fetch("/api/contact", {
+    const apiBase = import.meta.env.VITE_API_URL || '';
+    const resp = await fetch(`${apiBase}/api/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

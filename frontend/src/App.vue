@@ -7,7 +7,7 @@ import About from "./components/About.vue";
 import Specialists from "./components/Specialists.vue";
 import Contact from "./components/Contact.vue";
 import AOS from "aos";
-import "AOS/dist/aos.css";
+import "aos/dist/aos.css";
 import Footer from "./footer.vue";
 
 onMounted(() => {

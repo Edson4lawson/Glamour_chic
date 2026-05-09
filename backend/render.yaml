@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: glamour-chic-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        sync: false
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: RECAPTCHA_SECRET_KEY
+        sync: false
+      - key: RECAPTCHA_ACTION
+        value: contact
+      - key: RECAPTCHA_SCORE_THRESHOLD
+        value: "0.5"
+      - key: SENDGRID_API_KEY
+        sync: false
+      - key: CONTACT_TO_EMAIL
+        sync: false
+      - key: CONTACT_FROM_EMAIL
+        sync: false
