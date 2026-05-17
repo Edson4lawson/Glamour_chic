@@ -78,25 +78,25 @@ const services = ref([
         icon: 'fa-solid:clinic-medical',
         title: 'Lifting du visage',
         description: 'Rafraîchissez votre apparence avec nos procédures de lifting du visage personnalisées pour un effet naturel et rajeunissant.',
-        link:'#facelift'
+        link:'#appointment'
     },
     {
         icon: 'fa-solid:user-md',
         title: 'Botox & comblement',
         description: 'Atténuez les rides et redonnez du volume à votre visage avec nos traitements au Botox et aux produits de comblement de qualité supérieure.',
-        link:'#botox'
+        link:'#appointment'
     },
     {
         icon: 'fa-regular:smile',
         title: 'Traitements laser',
         description: 'Solutions laser avancées pour le rajeunissement cutané, l\'épilation définitive et le traitement des imperfections.',
-        link:'#laser'
+        link:'#appointment'
     },
     {
         icon: 'fa-solid:syringe',
         title: 'Remodelage corporel',
         description: 'Sculptez votre silhouette avec nos traitements innovants de remodelage corporel non invasifs.',
-        link:'#countouring'
+        link:'#appointment'
     },
 ])
 

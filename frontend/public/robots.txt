@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Indiquez aux moteurs de recherche où trouver votre sitemap
+Sitemap: https://glamourchic.vercel.app/sitemap.xml
